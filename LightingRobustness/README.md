@@ -56,3 +56,5 @@ Remarks:
 In the loop, updating the image only takes (number of bins) operations, instead (number of pixels)
 - The iteration ends, when the brightness is 'close enough' to the min, which is defined as +/- 1%, i.e.
     updated brightness is in the interval meanRange = (b_mean - b_mean/100.0, b_mean + b_mean/100.0)
+- gamma will always be in [0..1]. 'typical' gamma values for dark images are ~0.8. Values <0.5 tend to create images too noisy to be usable. This fact could be used to filter away such images immediately.
+
