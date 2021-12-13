@@ -52,7 +52,7 @@ Gamma is computated using an iterative bi-section algorithm:
     do gamma correction: img->img^gamma
         
 Remarks:
-Using the histogram for brightness computation is massively faster than using the image itself:
-- In the loop, updating the image only takes <number of bins> operations, instead <number of pixels>
+- Using the histogram for brightness computation is massively faster than using the image itself: 
+In the loop, updating the image only takes <number of bins> operations, instead <number of pixels>
 - The iteration ends, when the brightness is 'close enough' to the min, which is defined as +/- 1%, i.e.
     updated brightness is in the interval meanRange = (b_mean - b_mean/100.0, b_mean + b_mean/100.0)
