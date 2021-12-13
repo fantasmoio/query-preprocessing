@@ -3,6 +3,8 @@
 
 This project is a template to be converted to mobile.
 
+Author: Rolf
+
 ### Overview
 The image enhancement aims to increase the mean brightness of an input image to a 
 minimum level. Brightness is enhanced using gamma correction. The core routine of
