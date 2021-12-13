@@ -56,6 +56,7 @@ Gamma is computated using an iterative bi-section algorithm:
 Remarks:
 - Using the histogram for brightness computation is massively faster than using the image itself: 
 In the loop, updating the image only takes (number of bins) operations, instead (number of pixels)
+- If the (one time) computation of the histogram takes too long, the histogram can be computed on a subset of the original pixels (e.g., use every other column/row)
 - The iteration ends, when the brightness is 'close enough' to the min, which is defined as +/- 1%, i.e.
     updated brightness is in the interval meanRange = (b_mean - b_mean/100.0, b_mean + b_mean/100.0)
 - gamma will always be in [0..1]. 'typical' gamma values for dark images are ~0.8. Values <0.5 tend to create images too noisy to be usable. This fact could be used to filter away such images immediately.
